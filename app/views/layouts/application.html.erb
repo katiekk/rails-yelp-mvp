@@ -12,10 +12,19 @@
   </head>
 
   <body>
-    <nav class="navbar-lewagon">
+    <div class="d-flex navbar-lewagon p-3 align-items-center">
       <%= link_to "Restaurants", restaurants_path %>
-      <%= link_to "Add new restaurant", new_restaurant_path %>
-    </nav>
-    <%= yield %>
+      <%= link_to new_restaurant_path do %>
+        <i class="fas fa-plus"></i> Add new restaurant
+      <% end %>
+    </div>
+
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
